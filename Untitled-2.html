@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Vidhya Badampudi | AI/ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #1e1e1e;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+    header {
+      background: #2c2c2c;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+    }
+    nav a {
+      color: #d0d0d0;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3a8ee6;
+    }
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 60px 40px;
+    }
+    .section h3 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .project-card {
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #3a8ee6;
+    }
+    footer {
+      background: #2c2c2c;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sri Vidhya</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>AI & ML Engineer | Web Developer</h2>
+    <p>Crafting intelligent solutions with elegant code and meaningful design.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <p>I am a passionate AI/ML engineer and full-stack web developer based in Andhra Pradesh. I specialize in creating intelligent systems and crafting modern, scalable web applications.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="project-grid" id="projectsContainer">
+      <!-- Dynamic content inserted here by JavaScript -->
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <h3>Blog</h3>
+    <div id="blogPosts">
+      <!-- Blog posts inserted dynamically -->
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:srividhyabadampudi@gmail.com" style="color: #3a8ee6;">srividhyabadampudi@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/sri-vidhya" style="color: #3a8ee6;">linkedin.com/in/sri-vidhya</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sri Vidhya Badampudi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamic JavaScript content
+    const projects = [
+      {
+        title: "AI Chatbot",
+        description: "A smart conversational assistant built with NLP and TensorFlow."
+      },
+      {
+        title: "Portfolio Website",
+        description: "Responsive personal site using HTML, CSS, and JavaScript."
+      }
+    ];
+
+    const blogs = [
+      {
+        title: "How I Built an ML Model in 3 Days",
+        date: "June 10, 2025",
+        intro: "A quick recap of a fast-paced ML sprint."
+      },
+      {
+        title: "Why Web Performance Matters",
+        date: "May 27, 2025",
+        intro: "Slow sites lose users. Here's how to speed things up."
+      }
+    ];
+
+    const projectsContainer = document.getElementById('projectsContainer');
+    projects.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'project-card';
+      div.innerHTML = `<h4>${p.title}</h4><p>${p.description}</p>`;
+      projectsContainer.appendChild(div);
+    });
+
+    const blogPosts = document.getElementById('blogPosts');
+    blogs.forEach(b => {
+      const post = document.createElement('div');
+      post.style.marginBottom = '20px';
+      post.innerHTML = `<h4 style="color:white;">${b.title}</h4><small>${b.date}</small><p>${b.intro}</p>`;
+      blogPosts.appendChild(post);
+    });
+  </script>
+</body>
+</html>

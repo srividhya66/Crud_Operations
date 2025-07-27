@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Insert Data Form -->
+         
+        <form id="insertForm" class="box">
+            <h3>Insert Student Data</h3>
+            <input type="text" placeholder="Register Number - 22K61A6111" name="registerNumber" id="registerNumber" required>
+            <input type="number" placeholder="CGPA" step="0.01" name="cgpa" id="cgpa" required>
+            <button type="submit">Insert</button>
+        </form>
+
+        <!-- Update Data Form -->
+        <form id="updateForm" class="box">
+            <h3>Update Student Data</h3>
+            <input type="text" placeholder="Register Number - 22K61A6111" name="updateRegisterNumber" id="updateRegisterNumber" required>
+            <input type="number" placeholder="New CGPA" step="0.01" name="updateCgpa" id="updateCgpa">
+            <button type="submit">Update</button>
+        </form>
+
+        <!-- Delete Data Form -->
+        <form id="deleteForm" class="box">
+            <h3>Delete Student Data</h3>
+            <input type="text" placeholder="Register Number - 22K61A6111" name="deleteRegisterNumber" id="deleteRegisterNumber" required>
+            <button type="submit">Delete</button>
+        </form>
+
+        <!-- Display Data (Stored Data Section) -->
+        <div id="dataDisplay" class="box">
+            <h3>Stored Student Data</h3>
+            <ul id="studentList"></ul>
+        </div>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>
